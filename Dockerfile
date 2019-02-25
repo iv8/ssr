@@ -15,4 +15,4 @@ RUN apk --no-cache add curl python python-dev libsodium-dev openssl-dev udns-dev
  rm -rf ~/.cache && touch /etc/hosts.deny &&\
  apk del --purge .build-deps
 
-CMD sed -i "s|30mkey|${KEY}|" 30m.py && python 30m.py && python -u shadowsocksr/server.py -c /root/shadowsocksr/config.json
+CMD sed -i "s|30mkey|${KEY}|" 30m.py && python 30m.py && python -u shadowsocks/server.py -c /root/shadowsocksr/config.json
